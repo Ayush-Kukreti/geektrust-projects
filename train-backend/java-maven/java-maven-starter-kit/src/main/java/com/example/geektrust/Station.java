@@ -32,4 +32,15 @@ public class Station {
         this.relativeDistance = relativeDistance;
     }
 
+    // need to add this for JUnit assertions
+    // when we are using a user defined List we need to override the equals method
+    @Override
+    public boolean equals(Object obj) {
+        Station station =(Station) obj;
+        boolean status = false;
+        if(this.stationCode.equals(station.stationCode)){
+            status = true;
+        }
+        return status;
+    }
 }

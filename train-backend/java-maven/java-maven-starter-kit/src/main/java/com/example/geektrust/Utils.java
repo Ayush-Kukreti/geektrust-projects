@@ -125,21 +125,17 @@ public class Utils {
     }
 
     public List<Station> prepareStationInput(String input){
-        // make a separate list of input for train A
         String[] inputStations = input.split("\\s+");
-
         List<Station> inputTrainStations = new ArrayList<>();
-        for (int i = 2; i < inputStations.length; i++) {
 
-        }
         for (String inputStation : inputStations) {
             inputTrainStations.add(new Station(inputStation));
         }
-        // remove train name and engine value
+        // remove train name
         inputTrainStations.remove(0);
+        // remove engine value
         inputTrainStations.remove(0);
 
         return inputTrainStations;
     }
-
 }
