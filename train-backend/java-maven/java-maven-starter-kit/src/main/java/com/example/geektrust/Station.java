@@ -4,8 +4,8 @@ package com.example.geektrust;
 
 public class Station {
 
-    public String stationCode;
-    public Integer relativeDistance;
+    private String stationCode;
+    private Integer relativeDistance;
 
     public String getStationCode() {
         return stationCode;

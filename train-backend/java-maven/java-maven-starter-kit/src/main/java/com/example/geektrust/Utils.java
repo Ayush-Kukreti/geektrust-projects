@@ -1,5 +1,6 @@
 package com.example.geektrust;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -157,5 +158,18 @@ public class Utils {
         inputTrainStations.remove(0);
 
         return inputTrainStations;
+    }
+
+    public static String[] getInput(InputStream fis) throws FileNotFoundException {
+
+        // the file to be opened for reading
+        Scanner sc = new Scanner(fis); // file to be scanned
+        // input will always have 2 lines: trainA and trainB
+        String input[] = new String[2];
+        int count = 0;
+        while (sc.hasNextLine()) {
+            input[count++] = sc.nextLine();
+        }
+        return input;
     }
 }

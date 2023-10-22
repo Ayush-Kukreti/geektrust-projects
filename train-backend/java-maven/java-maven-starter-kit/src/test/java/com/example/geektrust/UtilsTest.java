@@ -131,4 +131,13 @@ public class UtilsTest {
 
         Assertions.assertEquals(expected,actual);
     }
+    @Test
+    public void testGetInput() throws FileNotFoundException {
+
+        InputStream inputStream = Main.class.getResourceAsStream("/input1.txt");
+        String []actual = Utils.getInput(inputStream);
+        String []expected = {"TRAIN_A ENGINE NDL NDL KRN GHY SLM NJP NGP BLR", "TRAIN_B ENGINE NJP GHY AGA PNE MAO BPL PTA"};
+
+        Assertions.assertArrayEquals(expected,actual);
+    }
 }
